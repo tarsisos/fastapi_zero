@@ -12,7 +12,7 @@ def test_create_user(session):
 
     session.add(user)
     session.commit()
-    
+
     result = session.scalar(
         select(User).where(User.email == 'duno@ssauro.com')
     )
